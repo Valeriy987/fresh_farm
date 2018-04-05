@@ -755,7 +755,6 @@ header{
 	overflow: hidden;
 	position: relative;
 	margin-bottom: 20px;
-    cursor: pointer;
     z-index: 99;
 }
 
