@@ -22,11 +22,11 @@
 					<div class="row">
 						<div class="col-lg-6 col-md-8 d-flex">
 							<div class="adress">
-								<i class="position"></i>
+                                <a class="position" href="#"></a>
 								FoodFarm, W 35th St, New York
 							</div>
 							<div class="adress">
-								<i class="message"></i>
+                                <a class="message" href="#"></a>
 								info_floor@gmail.com
 							</div>
 						</div>
@@ -41,14 +41,14 @@
 					</div>
 				</div>
 			</header>
-			<div class="headerMenu">
+			<div id="fixMenu" class="headerMenu">
 				<div id="menu" class="container">
 					<nav id="nav" class="navbar navbar-expand-md navbar-light bg-white">
-						<a class="navbar-brand" href="#">
+						<a class="navbar-brand" href="index.html">
 							<img src="img/logo.png" alt="logo"/>
 						</a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-		    			<span class="navbar-toggler-icon"></span>
+		    			    <div class="burger"></div>
 		  				</button>
 						<div class="collapse navbar-collapse" id="navbarNav">
 						    <ul class="navbar-nav">
@@ -56,16 +56,16 @@
 						        <a class="nav-link" href="#">Home</a>
 						      </li>
 						      <li class="nav-item">
-						        <a class="nav-link" href="#">Gallery</a>
+						        <a class="nav-link" href="#slider" data-target="anchor">Gallery</a>
 						      </li>
 						      <li class="nav-item">
-						        <a class="nav-link" href="#">About</a>
+						        <a class="nav-link" href="#ab" data-target="anchor">About</a>
 						      </li>
 						      <li class="nav-item">
-						        <a class="nav-link" href="#">Shop</a>
+						        <a class="nav-link" href="#sh" data-target="anchor">Shop</a>
 						      </li>
 						      <li class="nav-item">
-						        <a class="nav-link" href="#">Blog</a>
+						        <a class="nav-link" href="#bl" data-target="anchor">Blog</a>
 						      </li>
 						      <li class="nav-item">
 						        <a class="nav-link" href="#">Contact</a>
@@ -151,7 +151,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="about">
+			<div id="ab" class="about">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
@@ -253,7 +253,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="organic-product">
+			<div id="sh" class="organic-product">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12">
@@ -266,23 +266,23 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="menu-products">
-								<ul class="menu-products-item">
-									<li class="green-li"><a class="color-font" href="#">All Product</a></li>
-									<li><a href="#">Milk</a></li>
-									<li><a href="#">Fruits</a></li>
-								</ul>
-								<ul class="menu-products-item">
-									<li><a href="#">Vegetables</a></li>
-									<li><a href="#">Juices</a></li>
-									<li><a href="#">Beef</a></li>
-								</ul>
+                                <ul class="menu-products-item">
+                                    <li id="li1" class="li-but green-li"><button id="b1" type="button" class="control color-font" data-filter="all" onclick="functabs('1')">All&nbsp;Product</button></li>
+                                    <li id="li2" class="li-but"><button id="b2" type="button" class="control" data-filter=".milk" onclick="functabs('2')">Milk</button></li>
+                                    <li id="li3" class="li-but"><button id="b3" type="button" class="control" data-filter=".fruits" onclick="functabs('3')">Fruits</button></li>
+                                </ul>
+                                <ul class="menu-products-item">
+                                    <li id="li4" class="li-but"><button id="b4" type="button" class="control" data-filter=".vegetables" onclick="functabs('4')">Vegetables</button></li>
+                                    <li id="li5" class="li-but"><button id="b5" type="button" class="control" data-filter=".juices" onclick="functabs('5')">Juices</button></li>
+                                    <li id="li6" class="li-but"><button id="b6" type="button" class="control" data-filter=".beef" onclick="functabs('6')">Beef</button></li>
+                                </ul>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="container">
+				<div id="Container" class="container">
 					<div class="row">
-						<div class="col-lg-4 col-md-6">
+						<div class="col-lg-4 col-md-6 mix fruits">
 							<div class="organic-product-item">
 								<div class="organic-product-item-a fruit-1">
 									<p>Pineapple</p>
@@ -294,7 +294,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6">
+						<div class="col-lg-4 col-md-6 mix fruits">
 							<div class="organic-product-item">
 								<div class="organic-product-item-a fruit-2">
 									<p>Clipart</p>
@@ -306,7 +306,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6">
+						<div class="col-lg-4 col-md-6 mix vegetables">
 							<div class="organic-product-item">
 								<div class="organic-product-item-a fruit-3">
 									<p>Onions</p>
@@ -318,7 +318,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6">
+						<div class="col-lg-4 col-md-6 mix beef">
 							<div class="organic-product-item">
 								<div class="organic-product-item-a fruit-4">
 									<p>Fresh beef meat</p>
@@ -330,7 +330,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6 col-ms-6">
+						<div class="col-lg-4 col-md-6 col-ms-6 mix fruits">
 							<div class="organic-product-item">
 								<div class="organic-product-item-a fruit-5">
 									<p>Cherry</p>
@@ -342,7 +342,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6">
+						<div class="col-lg-4 col-md-6 mix vegetables">
 							<div class="organic-product-item">
 								<div class="organic-product-item-a fruit-6">
 									<p>Broccoli</p>
@@ -357,7 +357,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="reviews">
+			<div id="bl" class="reviews">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12">
@@ -488,8 +488,8 @@
 					<div class="row">
 						<div class="col-lg-5 col-md-4">
 							<div class="footer-item">
-								<img src="img/logo-footer.png" alt="">
-								<p class="footer-p"><span>Farmfresh</span> was established in 2017 by talented business veterans, Rod Davies and Matthew Levington, the journey began when founders Matthew Levington and Rod Davies, met up in 2017 over a beer</p>
+                                <a href="index.html"><img src="img/logo-footer.png" alt=""></a>
+                                <p class="footer-p"><a href="#"><span>Farmfresh</span></a> was established in 2017 by talented business veterans, Rod Davies and Matthew Levington, the journey began when founders Matthew Levington and Rod Davies, met up in 2017 over a beer</p>
 								<div class="d-flex">
 									<a class="icons-a" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 									<a class="icons-a" href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
@@ -551,7 +551,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="footer-copyrights-item">
-								<p>Copyright © 2017 <span>Farmfresh</span>  All Rights Reserved by <span>Unifytheme</span></p>
+                                <p>Copyright © 2017 <a href="#"><span>Farmfresh</span></a>  All Rights Reserved by <a href="#"><span>Unifytheme</span></a></p>
 							</div>
 						</div>
 						<div class="col-md-6 ml-auto">
@@ -565,17 +565,19 @@
 			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-
-		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-		<!-- Optional JavaScript -->
+            <!-- Optional JavaScript -->
     	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 			<script src="js/script.js"></script>
+            <script src="js/mixitup.min.js"></script>
     	<script src="js/bootstrap.min.js"></script>
     	<script src="js/classie.js"></script>
 		<script src="js/uisearch.js"></script>
 		<script>
 			new UISearch( document.getElementById( 'sb-search' ) );
+
+            var containerEl = document.querySelector('#Container');
+
+            var mixer = mixitup(containerEl);
 		</script>
   </body>
 </html>

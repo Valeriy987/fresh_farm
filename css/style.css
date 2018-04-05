@@ -119,8 +119,6 @@
     color: #1bbd0f;
 }
 
-
-
 .icon-next .path1{
    font-size: 50px;
 }
@@ -184,7 +182,7 @@ ol, ul {list-style: none;}
 
 li{font-family: Montserrat, Arial, sans-serif}
 
-a, a:hover {color: #000; text-decoration: none;}
+a, a:hover {color: #19c40c!important; text-decoration: none;}
 
 .clearfix:before,
 .clearfix:after {
@@ -219,8 +217,10 @@ a, a:hover {color: #000; text-decoration: none;}
 }
 
 header{
+    position: relative;
 	height: 60px;
 	background: #19c40c;
+    z-index: 9999;
 }
 
 .container{height: inherit;}
@@ -249,17 +249,18 @@ header{
 	padding-left: 40px;
 }
 
-.adress i{
+.adress a{
 	margin-right: 15px;
 }
 
-.adress i.position{
+.adress a.position{
+    display: block;
 	width: 22px;
 	height: 26px;
 	background: url(../img/placeholder.png) no-repeat center;
 }
 
-.adress i.message{
+.adress a.message{
 	width: 25px;
 	height: 17px;
 	background: url(../img/massil.png) no-repeat center;
@@ -294,9 +295,67 @@ header{
 
 .social a.social-gl{background: url(../img/google.png) no-repeat center;}
 
+.navbar-toggler{
+    position: relative;
+    width: 55px;
+    height: 45px;
+}
+
+
+.burger{
+    width: 35px;
+    height: 4px;
+    background: #000;
+    position: absolute;
+    top: 49%;
+    right: -18%;
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+}
+
+.burger:before,
+.burger::after{
+    content: '';
+    position: absolute;
+    width: 35px;
+    height: 4px;
+    background: #000;
+    transition: 0.5s;
+    right: 0;
+}
+
+.burger:before{top: -11px;}
+.burger:after{top: 11px;}
+
+.navbar-toggler.burger-active .burger{
+    background: rgba(0,0,0,0);
+}
+
+.navbar-toggler.burger-active .burger:before{
+    transform: rotate(135deg);
+    top: 0;
+}
+
+.navbar-toggler.burger-active .burger:after{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.headerMenu{
+    position: relative;
+    width: 100%;
+    height: 135px;
+    z-index: 99;
+    background: #fff;
+}
+
+.fixed{
+    position: fixed;
+    top: 0;
+}
+
 #menu{
 	position: relative;
-	height: 135px;
 	display: flex;
 	align-items: center;
 }
@@ -307,10 +366,10 @@ header{
 
 #navbarNav{
 	justify-content: flex-end;
-	-moz-transition: all 1s ease-out;
-	-o-transition: all 1s ease-out;
-	-webkit-transition: all 1s ease-out;
-	transition: all 1s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
 }
 
 .navbar-nav{margin-right: 30px;}
@@ -319,7 +378,7 @@ header{
 .navbar-nav li:last-of-type{margin-right: 0;}
 
  #menu .navbar-nav a{
-	color: #121212;
+	color: #121212!important;
 	font-size: 16px;
 	text-transform: uppercase;
      -moz-transition: all 0.3s ease-out;
@@ -329,7 +388,7 @@ header{
 }
 
 #menu .navbar-nav a:hover{
-	color: #19c40c;
+	color: #19c40c!important;
 }
 
 #nav{
@@ -407,7 +466,7 @@ header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #fff;
+	color: #fff!important;
 	text-transform: uppercase;
 	font-size: 16px;
 	width: 195px;
@@ -510,7 +569,7 @@ header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: #fff;
+	color: #fff!important;
 	text-transform: uppercase;
 	font-size: 16px;
 	width: 195px;
@@ -702,37 +761,48 @@ header{
 
 .menu-products-item li{
 	margin: 0 30px;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
 }
 
-.menu-products-item li.green-li{
+.menu-products-item .green-li{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    height: 50px;
     background: #19c40c;
     border-radius: 34px;
     width: 190px;
 }
 
-.menu-products-item a{
+.menu-products-item .backgr-none{background: #fff; width: auto; height: auto;}
+
+.menu-products-item button{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: #121212;
+	color: #121212!important;
 	font-size: 16px;
 	text-transform: uppercase;
-	-moz-transition: all 0.5s ease-out;
-	-o-transition: all 0.5s ease-out;
-	-webkit-transition: all 0.5s ease-out;
-	transition: all 0.5s ease-out;
+    cursor: pointer;
+	-moz-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+    background: rgba(0,0,0,0);
+    border: none;
+    outline: 0 !important;
 }
 
+.menu-products .menu-products-item .color-black{color: #121212!important;}
 
 .menu-products-item .color-font{
-    color: #fff;
+    color: #fff!important;
 }
 
-.menu-products-item a:hover{text-decoration: none;}
+.menu-products .menu-products-item button:hover{text-decoration: none; color: #1bbd0f!important;}
 
 .menu-products-item a.green{
 	width: 155px;
@@ -759,7 +829,7 @@ header{
 	overflow: hidden;
 	position: relative;
 	margin-bottom: 20px;
-    z-index: 99;
+    z-index: 9;
 }
 
 .organic-product-item-a{
@@ -813,7 +883,7 @@ header{
 	background-color: #19c40c;
 	border-radius: 20px;
 	font-size: 18px;
-	color: #fff;
+	color: #fff!important;
 	font-family: LatoBold, sans-serif;
 	padding-top: 5px;
 	margin-top:20px;
@@ -1041,6 +1111,8 @@ footer{
 
 .footer-item p span{color:#138707;}
 
+.footer-item p a:hover{text-decoration: underline;}
+
 .footer-item .icons-a{
 	margin-right: 35px;
 	color: #fff;
@@ -1082,11 +1154,15 @@ footer{
 .footer-item a{
 	font-family: LatoRegular, sans-serif;
 	font-size: 16px;
-	color: #b9b8b8;
+	color: #b9b8b8!important;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .footer-item a:hover{
-	color: #138707;
+	color: #138707!important;
 	text-decoration: none;
 }
 
@@ -1274,10 +1350,12 @@ footer{
 @media screen and (max-width:768px) {
 
 	header{
-		height: calc(0.13*97vh);
+		height: 50px;
 		background: #19c40c;
 		padding-top: 10px;
 	}
+
+    .adress{display: none;}
 
 	.col-lg-6{
 		justify-content: center;
@@ -1285,6 +1363,7 @@ footer{
 
 	.social{
 		justify-content: center;
+        margin-top: -20px;
 	}
 
  	#navbarNav{
@@ -1352,13 +1431,13 @@ footer{
 
     .menu-products-item a.color-font{margin-bottom: 0;}
 
-    .menu-products-item a{
-
-    }
+    #menu .sb-search.sb-search-open{width: 100%;}
 
     .menu-products-item li{
+        display: flex;
         margin: 0 40px;
         margin-bottom: 0;
+        height: 50px;
     }
 
     .sale .carousel-control-prev{
@@ -1406,7 +1485,7 @@ footer{
 	}
 
 	header {
-		height: 110px;
+		height: 50px;
 		background: #19c40c;
 		padding-top: 10px;
 	}
@@ -1522,10 +1601,12 @@ footer{
     .menu-products-item{
         margin-bottom: 0;
         justify-content:flex-start;
-        height: 198px;
+        height: auto;
     }
 
     .menu-products-item li{
+        display: block;
+        height: auto;
         margin-bottom: 28px;
     }
 

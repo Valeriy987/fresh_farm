@@ -36,7 +36,7 @@
 	border: 1px solid black;
 	outline: none;
 	background: #fff;
-	width: 65%;
+	width: 92%;
 	height: 20px;
 	margin: 0;
 	z-index: 10;
@@ -113,7 +113,7 @@
 /* Open state */
 .sb-search.sb-search-open,
 .no-js .sb-search {
-	width: 100%;
+	width: 69%;
 }
 
 .sb-search.sb-search-open .sb-icon-search,
