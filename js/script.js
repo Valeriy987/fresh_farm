@@ -10,22 +10,46 @@ $(function(){
 
 //фиксация меню при прокрутке
 
-$(document).scroll(function () {
+/*$(document).scroll(function () {
     if ($(document).scrollTop()>$('header').height()) {
         $('.headerMenu').addClass('fixed');
     }else {
         $('headerMenu').removeClass('fixed');
     }
+});*/
+
+//Прилипающее  меню  при  скроле
+$(function(){
+    $(window).scroll(function() {
+        if($(this).scrollTop() >= 60) {
+            $('.headerMenu').addClass('fixed');
+        }
+        else{
+            $('.headerMenu').removeClass('fixed');
+        }
+    });
+});
+
+$(function(){
+    $(window).scroll(function() {
+        if($(this).scrollTop() >= 50) {
+            $('div#slider').addClass('mt135');
+        }
+        else{
+            $('div#slider').removeClass('mt135');
+        }
+    });
 });
 
 
+//эфект бургера
 $(document).ready(function () {
     $('.navbar-toggler').click(function () {
        $('.navbar-toggler').toggleClass('burger-active');
     });
 });
 
-
+//
 function functabs(number) {
 
     var divs = document.getElementsByClassName('li-but');
@@ -41,63 +65,26 @@ function functabs(number) {
     }
     document.getElementById('b' + number).classList.remove("color-black");
     document.getElementById('b' + number).classList.add("color-font");
-
 }
 
-// sorting
 
-/*
-var $container = $('#container-sort');
-
-$('#sort a').click(function(){
-    // get href attribute, minus the #
-    var $this = $(this),
-        sortName = $this.attr('href').slice(1),
-        asc = $this.parents('.sort').hasClass('asc');
-    $container.isotope({
-        sortBy : sortName,
-        sortAscending : asc
+//появление ссылки
+jQuery(function(f){
+    var element = f('#back-top');
+    f(window).scroll(function(){
+        element['fade'+ (f(this).scrollTop() > 200 ? 'In': 'Out')](500);
     });
-    return false;
 });
 
-// switches selected class on buttons
-$('#sh').find('.option-set a').click(function(){
-    var $this = $(this);
-
-    // don't proceed if already selected
-    if ( !$this.hasClass('selected') ) {
-        $this.parents('.option-set').find('.selected').removeClass('selected');
-        $this.addClass('selected');
-    }
-
-});
-
-
-$(function(){
-    $container.isotope({
-        itemSelector : '.element',
-        getSortData : {
-            symbol : function( $elem ) {
-                return $elem.attr('data-symbol');
-            },
-            category : function( $elem ) {
-                return $elem.attr('data-category');
-            },
-            number : function( $elem ) {
-                return parseInt( $elem.find('.number').text(), 10 );
-            },
-            weight : function( $elem ) {
-                return parseFloat( $elem.find('.weight').text().replace( /[\(\)]/g, '') );
-            },
-            name : function ( $elem ) {
-                return $elem.find('.name').text();
-            }
-        }
+//плавная прокрутка на верх
+$(document).ready(function(){
+    $("#wrap").on("click","#back-top", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
     });
-
-});*/
-
+});
 
 
 

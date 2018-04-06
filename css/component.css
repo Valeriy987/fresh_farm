@@ -12,7 +12,7 @@
 
 .sb-search {
 	position: absolute;
-	top: 48px;
+	top: 35%;
 	right: 15px;
 	width: 0%;
 	min-width: 20px;
@@ -28,6 +28,7 @@
 	-webkit-transition: all 1s ease-out;
 	transition: all 1s ease-out;
 }
+
 
 .sb-search-input {
 	position: absolute;
